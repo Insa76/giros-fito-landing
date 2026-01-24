@@ -1,0 +1,55 @@
+@custom-variant dark (&:is(.dark *));
+
+/* ======================
+   TOKENS
+====================== */
+
+:root {
+  --font-size: 16px;
+
+  --background: #0a0a0f;
+  --foreground: #f5f5f7;
+
+  --card: #1a1a24;
+  --muted: #27273a;
+
+  --primary: #9333ea;
+  --secondary: #ec4899;
+  --accent: #6366f1;
+
+  --border: rgba(147, 51, 234, 0.2);
+
+  --radius: 0.75rem;
+
+  --font-sans: system-ui, -apple-system, sans-serif;
+}
+
+/* ======================
+   DARK MODE
+====================== */
+
+.dark {
+  --background: #0b0b0b;
+  --foreground: #ffffff;
+  --card: #151515;
+  --muted: #202020;
+}
+
+/* ======================
+   BASE STYLES
+====================== */
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+}
