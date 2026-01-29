@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { Play, Calendar } from "lucide-react"
+import HeroTurntable from "../components/hero/HeroTurntable"
 
 interface HeroSectionProps {
   backgroundImage: string
@@ -11,6 +12,7 @@ export default function HeroSection({ backgroundImage }: HeroSectionProps) {
       id="inicio"
       className="relative h-screen flex items-center justify-center overflow-hidden bg-background"
     >
+      
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -23,6 +25,9 @@ export default function HeroSection({ backgroundImage }: HeroSectionProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20" />
       </div>
+
+      {/* VINILO */}
+       <HeroTurntable />
 
       {/* Partículas */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -49,7 +54,7 @@ export default function HeroSection({ backgroundImage }: HeroSectionProps) {
       </div>
 
       {/* Contenido */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-30 text-center px-6 max-w-5xl mx-auto">
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}

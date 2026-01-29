@@ -16,7 +16,7 @@ const images = [
 ]
 
 export default function Landing() {
-const heroImage = "/fito.png"
+const heroImage = "/fitos.png"
 const bandImage = "/band.jpeg"
 
   return (
